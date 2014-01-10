@@ -1,0 +1,1 @@
+MongoMapper.database = "todo23-#{Rails.env}"
