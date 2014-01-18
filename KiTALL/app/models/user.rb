@@ -2,7 +2,6 @@
 
 class User
   include MongoMapper::Document
-
   key :password, String
   key :username, String
   key :firstname, String
