@@ -6,6 +6,9 @@ mongod
 //login to mongo console
 mongo
 
+//install all the gems
+bundle install
+
 // this will create database named KiTALL-developement in developement env
 rake db:create 
 
