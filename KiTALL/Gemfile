@@ -27,6 +27,9 @@ gem 'jbuilder', '~> 1.2'
 gem 'mongo_mapper', :git => "git://github.com/mongomapper/mongomapper.git", :tag=> "v0.13.0.beta2"
 gem 'bson_ext'
 gem 'haml'
+gem 'protected_attributes'
+gem 'bcrypt-ruby', :require => "bcrypt"
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
