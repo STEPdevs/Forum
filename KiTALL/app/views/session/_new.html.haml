@@ -1,0 +1,16 @@
+%html
+ %body
+  %h2 Welcome Guest!
+  %p Please enter your login and password here
+  %br
+  =form_for(:session, :url=> session_index_path) do |f|
+   %div
+    =f.label :email
+    =f.text_field :email
+    %br
+   %div
+    =f.label :password
+    =f.password_field :password
+    %br
+   %div
+   =f.submit :login

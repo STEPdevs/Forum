@@ -21,9 +21,6 @@ class User
 	
 	def self.authenticate(email, password)
 		user = find_by_email(email)
-
-    puts BCrypt::Engine.hash_secret(password, user.password_salt)
-    puts user.password_hash
     if user && user.password_hash == BCrypt::Engine.hash_secret(password, user.password_salt)
 			user
       puts user.email

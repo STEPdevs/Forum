@@ -1,2 +1,7 @@
 %html
-	=link_to 'Registration', new_user_path
+  %div{:class=>"panel"}
+    =link_to 'Registration', new_user_path
+    =link_to 'Login' , "#login_form", :class => "overlay", :id => "login_form"
+    %div{:class=>"popup"}
+      =render "session/new"
+      =link_to '',"#close", :class => 'close'
