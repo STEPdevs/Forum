@@ -1,0 +1,9 @@
+login
+
+<%= form_for(:session, :url=> session_index_path) do |f|%>
+    User Name
+    <%= f.text_field :name%><br/>
+    Password
+    <%= f.password_field :password%><br/>
+    <%= f.submit "login" %>
+<% end %>
