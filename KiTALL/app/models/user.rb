@@ -21,16 +21,20 @@ class User
 	
 	def self.authenticate(email, password)
 		user = find_by_email(email)
-		if user && user.password_hash == BCrypt::Engine.hash_secret(password, user.password_salt)
+
+    puts BCrypt::Engine.hash_secret(password, user.password_salt)
+    puts user.password_hash
+    if user && user.password_hash == BCrypt::Engine.hash_secret(password, user.password_salt)
 			user
-		else
-			nil
+      puts user.email
+    else
+      nil
 		end
 	end
 
   def encrypt_password
-  	self.password_salt = BCrypt::Engine.generate_salt
-  	self.password_hash = BCrypt::Engine.hash_secret(password,password_salt)
+    self.password_salt = BCrypt::Engine.generate_salt()
+  	self.password_hash = BCrypt::Engine.hash_secret(@password,password_salt)
   end
 end		
 
