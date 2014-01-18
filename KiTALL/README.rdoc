@@ -1,28 +1,17 @@
-== README
+run these steps sequentially :
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+//run mongodb server
+mongod
 
-Things you may want to cover:
+//login to mongo console
+mongo
 
-* Ruby version
+// this will create database named KiTALL-developement in developement env
+rake db:create 
 
-* System dependencies
+// to seed dummy data in project
+rake db:seed
 
-* Configuration
+//start the server
+rails server
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
