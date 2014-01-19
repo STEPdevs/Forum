@@ -1,5 +1,3 @@
-
-
 class User
   include MongoMapper::Document
   key :password, String
@@ -11,11 +9,13 @@ class User
   key :email, String
 	key :password_salt, String
 	key :password_hash, String
-	
-	attr_accessor :password
+
+  many :questions,
+           :dependent => :destroy
+
+  attr_accessor :password
   validates_presence_of :username,:firstname, :lastname, :sex, :age, :email
   validates_numericality_of :age
-  has_many :questions, :foreign_key => :user_id, :class => User	
 	attr_accessible :username,:firstname, :lastname, :sex, :age, :email
 	before_save :encrypt_password
 	
@@ -33,5 +33,14 @@ class User
     self.password_salt = BCrypt::Engine.generate_salt()
   	self.password_hash = BCrypt::Engine.hash_secret(@password,password_salt)
   end
-end		
 
+  def post(question)
+    self.questions << question;
+    self.save
+  end
+
+  def getAllQuestions()
+    self.questions
+  end
+
+end

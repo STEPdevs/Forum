@@ -1,10 +1,11 @@
 require 'spec_helper'
+require 'user'
 
 describe Question do
 
   before(:each) do
     @valid_attributes = {
-        :question => "Test Question",
+        :title => "Test Question",
         :posted_at =>Time.now
     }
   end
@@ -18,8 +19,8 @@ describe Question do
 
   it 'must have a posted time' do
     question=Question.new
-    question.should_not be_valid       #calls question.valid?
-    question.errors_on(:posted_at).should_not be_nil  #i want to make sure it doesn't fail bcz of question attribute
+    question.should_not be_valid
+    question.errors_on(:posted_at).should_not be_nil
   end
 
 
@@ -29,14 +30,19 @@ describe Question do
     }.should change(Question, :count).by(1)
   end
 
+
   it 'should verify that question is saved' do
-    question=Question.create(@valid_attributes)
-
-    #p question._id
-    p Question.all
-
+    savedQuestion=Question.create(@valid_attributes)
+    savedQuestion.title.should eql "Test Question"
   end
 
+  it 'should give the name of the Question seeker' do
+    questionTobeAsked=Question.new(@valid_attributes)
+    testUser = User.create({:username => "ravi2020",:firstname => "ravi",:lastname => "sharma",
+                            :sex => "male",:age =>"22",:email => "abc@gmail.com" })
+    testUser.post(questionTobeAsked)
 
+    questionTobeAsked.getUserName().should == "ravi2020"
+  end
 
 end

@@ -1,11 +1,14 @@
 class Question
   include MongoMapper::Document
 
-  key :question,String, :required => true
+  key :user_id,ObjectId
+  key :title,String, :required => true
   key :posted_at,Time, :required => true
 
+  belongs_to :user
 
-  key :user_id , ObjectId
-  belongs_to :user, :class => User
+  def getUserName()
+      self.user.username
+  end
 
 end
