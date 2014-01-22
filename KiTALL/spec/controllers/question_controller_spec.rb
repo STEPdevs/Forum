@@ -1,5 +1,9 @@
 require 'spec_helper'
 
-describe QuestionController do
-
-end
+#describe QuestionController do
+#
+#  it '' do
+#
+#  end
+#
+#end
