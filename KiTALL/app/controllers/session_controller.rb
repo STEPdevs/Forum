@@ -4,9 +4,13 @@ class SessionController < ApplicationController
   end
 
   def create
-    if(User.authenticate(params[:session][:email],params[:session][:password]) !=nil)
-    end
-    redirect_to activity_path
+    if(User.authenticate(params[:session][:email],params[:session][:password]) != nil)
+    	p "new hello"
+    	redirect_to activity_path    
+  	else 
+  		p "new hello----------------------------------------"
+  		redirect_to users_path
+		end
   end
 
   def destroy

@@ -1,0 +1,20 @@
+%html
+	%head
+	%body				
+		.register-fields
+			= form_for @user do |f|
+				- if @user.errors.any?
+					= @user.errors.full_messages.each do |f|
+						= f + ','
+				= f.text_field :username,placeholder:'Username', class:'input-text'
+				= f.password_field :password,placeholder:'Password', class:'input-password'
+				= f.text_field :firstname,placeholder:'Firstname', class:'input-text'
+				= f.text_field :lastname,placeholder:'Lastname', class:'input-text'
+				.radio-container
+					= f.label :Boy, class:'input-gender',id:'boy_label'
+					= f.radio_button :boy,true,class:'input-radio'
+					= f.label :Girl,class:'input-gender',id:'girl_label'
+					= f.radio_button :boy,false,class:'input-radio'
+				= f.text_field :email, placeholder:'Email', class:'email input-text'
+				= f.text_field :date_of_birth, :id=>:datepicker, placeholder:'Date Of Birth', class:'input-text'
+				= f.submit :submit,class:'input-submit'

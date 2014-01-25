@@ -1,0 +1,80 @@
+.registration{
+	height: 80%;
+	width: 100%;
+	background-color: voilet;
+}
+
+.register-fields{
+	margin-left: 20px;
+	margin-right: 15px;
+	margin-top: 23px;
+	margin-bottom: 23px;
+	position: absolute;
+	width: 90%;
+	height: auto;
+	background: -webkit-radial-gradient( 36% 46%, circle, white, blueviolet 94%);
+	border-radius: 10px;	
+	padding-left: 10px;
+	padding-top: 20px;
+	padding-bottom: 40px;
+}
+input[type=password].input-password{
+	width: 220px;
+	outline: none;
+	border-radius: 5px;
+	background-color: white;
+	height: 25px;
+	font-size: 15px;
+	margin-top: 10px;
+	border: 1px solid indigo;
+}
+input[type=text].input-text{
+	width: 220px;	
+	outline: none;
+	border-radius: 5px;
+	background-color: white;
+	height: 25px;
+	font-size: 15px;
+	margin-top: 10px;
+	border: 1px solid indigo;
+}
+label.input-gender:hover{
+	cursor: pointer;
+}
+label.input-gender{
+	text-align: center;
+	width: 110px;	
+	display: inline;
+	outline: none;
+	border-radius: 5px;
+	background-color: indigo;
+	height: 25px;	
+	font-family: bold;	
+	float: left;
+	font-size: 15px;
+	line-height: 1.7;
+	color: white;
+}
+input[type=submit].input-submit:hover{
+	cursor: pointer;
+}
+input[type=submit].input-submit{
+	width: 150px;
+	outline: none;
+	border-radius: 5px;
+	background-color: indigo;
+	height: 30px;
+	font-size: 15px;
+	margin-left: 15px;
+	color: white;
+	border: 1px solid indigo;
+}
+.radio-container{
+	width: 220px;		
+}
+input[type=radio].input-radio{
+	display: none;
+}
+input[type=text].email{
+	margin-top: 0px; !important
+}

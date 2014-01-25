@@ -1,4 +1,5 @@
 require 'spec_helper'
+<<<<<<< Updated upstream
 require 'question'
 
 describe User do
@@ -34,4 +35,19 @@ describe User do
     testUser.getAllQuestions()[1].title.should == "Test Question2"
   end
 
+=======
+
+describe User do
+	it 'should create user with encrypted password' do
+		user = FactoryGirl.create(:user)
+	  authenticated_user = User.authenticate(user.email, user.password)
+	  expect(authenticated_user.email).to eq(user.email)
+	end
+
+	{username: "",firstname: "",lastname: "",email: "",password: ""}.each do |field,value|
+		it "should not create user if #{field} is blank" do
+			FactoryGirl.build(:user, {field=> value}).should_not be_valid
+		end
+	end
+>>>>>>> Stashed changes
 end

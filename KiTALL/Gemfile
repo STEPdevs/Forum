@@ -29,6 +29,8 @@ gem 'bson_ext'
 gem 'haml'
 gem 'protected_attributes'
 gem 'bcrypt-ruby', :require => "bcrypt"
+gem "jquery_datepicker"
+gem 'jquery-rails'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
