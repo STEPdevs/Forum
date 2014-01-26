@@ -3,9 +3,8 @@
 	width: 100%;	
 	position: relative;
 }
-.login-fields{	
-	margin-top: 23px;	
-	position: absolute;
+.login-fields{
+	margin-top: 23px;
 	width: 90%;
 	height: 80px;
 	background: -webkit-radial-gradient( 2% 100%, ellipse, white, blueviolet 127%);

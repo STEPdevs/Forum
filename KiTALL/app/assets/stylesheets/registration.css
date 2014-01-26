@@ -1,10 +1,43 @@
-.registration{
-	height: 80%;
-	width: 100%;
-	background-color: voilet;
-}
 .error{
 	display: inline;
+}
+.animate{
+	top: 339px;
+	position: absolute;
+	color: white;
+	left: 525px;
+	-webkit-animation-name: opening;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction: alternate;
+}
+@-webkit-keyframes opening{
+	from,to{}
+	0%{
+		left: 525px;
+	}
+	100%{
+		left: 712px;
+	}
+}
+.register-text{
+	font-family: Helvetica;
+	font-size: 20px;
+	font-style: bold;
+	position: absolute;
+	top: 315px;
+	left: 525px;
+}
+.underline{
+	position: absolute;
+	top: 350px;
+	left: 525px;
+	width: 200px;
+	height: 4px;
+	border-radius: 50% 50%;
+	background-color: indigo;
+	transition:
 }
 .register-fields{		
 	margin-top: 23px;	
@@ -18,7 +51,7 @@
 	padding-bottom: 40px;	
 }
 input[type=password].input-password{
-	width: 220px;
+	width: 230px;
 	outline: none;
 	border-radius: 5px;
 	background-color: white;
@@ -28,7 +61,7 @@ input[type=password].input-password{
 	border: 1px solid indigo;
 }
 input[type=text].input-text{
-	width: 220px;	
+	width: 230px;
 	outline: none;
 	border-radius: 5px;
 	background-color: white;
@@ -42,7 +75,7 @@ label.input-gender:hover{
 }
 label.input-gender{
 	text-align: center;
-	width: 112px;
+	width: 116px;
 	display: inline;
 	outline: none;	
 	background-color: indigo;
@@ -70,7 +103,7 @@ input[type=submit].input-submit{
 	border: 1px solid indigo;
 }
 .radio-container{
-	width: 224px;		
+	width: 232px;
 }
 input[type=radio].input-radio{
 	display: none;	

@@ -1,8 +1,13 @@
 %html
 	%body
 		.header
-		.container
-			.login
-				= render :partial=>'session/new'
-			.registration
-				= render :partial=>'registration/new'
+		.main-container
+			.left-container
+				%h1.drop.relief KiTALL
+			%span.register-text Register here...
+			%span.underline
+			%span.animate ...
+			.container
+				.login
+					= render :partial=>'session/new'
+					= render :partial=>'registration/new'
