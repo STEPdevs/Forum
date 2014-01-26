@@ -9,7 +9,7 @@ class User
 	key :crypted_password, String  
   
   def self.authenticate(email, secret)
-    u = User.first(:conditions => {:email => email.downcase})
+    u = User.first(:conditions => {:username => email})
     u && u.authenticated?(secret) ? u : nil
   end
 	

@@ -3,15 +3,12 @@
 	width: 100%;	
 	position: relative;
 }
-.login-fields{
-	margin-left: 20px;
-	margin-right: 15px;
-	margin-top: 23px;
-	margin-bottom: 23px;
+.login-fields{	
+	margin-top: 23px;	
 	position: absolute;
 	width: 90%;
 	height: 80px;
-	background: -webkit-radial-gradient( 50% 50%, ellipse, white, blueviolet 100%);
+	background: -webkit-radial-gradient( 2% 100%, ellipse, white, blueviolet 127%);
 	border-radius: 10px;
 	padding-left: 10px;
 }

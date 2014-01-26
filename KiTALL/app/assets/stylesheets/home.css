@@ -1,18 +1,49 @@
 body{
-	background: -webkit-radial-gradient( 30% 70%, circle, blueviolet, indigo 94%);;
+	background: -webkit-radial-gradient( -8% 94%, circle, white, blueviolet 82%);
+	position: relative;
+}
+.arrow:hover{
+	border-top-color: indigo;
+	cursor: pointer;
+}
+.arrow{
+	width: 0px;
+	height: 0px;
+	border: 80px solid transparent;
+	border-top-color: blueviolet;
+	margin-left: 80%;
 }
 .header{
-	background-color: blueviolet;
+	background-color: indigo;
 	width: 104%;
-	height: 60px;
+	height: 50px;
 	margin-left: -8px;
 	margin-top: -8px;
 	position: fixed;
 	z-index: 999;
 }
+.footer{
+	background: -webkit-radial-gradient( -8% 94%, circle, white, blueviolet 68%);
+	width: 104%;
+	height: 100px;
+	margin-left: -8px;
+	margin-bottom: -18px;	
+	z-index: 999;
+	padding-bottom: 30px;
+	position: relative;
+}
+.sub-footer{
+	background-color: indigo;
+	width: 104%;
+	height: 50px;
+	margin-left: -8px;
+	margin-top: 80px;	
+	z-index: 999;
+	position: absolute;
+}
 .container{
 	left: 60%;	
-	width: 35%;
+	width: 36%;
 	height: 600px;
 	position: relative;
 	top: 50px;
