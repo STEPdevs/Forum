@@ -1,6 +1,5 @@
 class Question
   include MongoMapper::Document
-  attr_accessible :title, :title, :posted_at
 
   key :user_id,ObjectId
   key :title,String, :required => true

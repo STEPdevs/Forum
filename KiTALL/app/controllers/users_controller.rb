@@ -19,12 +19,12 @@ class UsersController < ApplicationController
       end
     end
   end
-
+  def activity_wall
+    @question =  Question.new
+  end
   private
   def set_user
     @user = User.find(params[:id])
   end
 
-	def activity_wall
-	end
 end
