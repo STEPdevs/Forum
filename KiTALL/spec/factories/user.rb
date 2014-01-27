@@ -1,14 +1,4 @@
 FactoryGirl.define do
-<<<<<<< Updated upstream
-  factory :user do
-    username  "ravi2020"
-    firstname  "ravi"
-    lastname  "sharma"
-    sex  "male"
-    age "22"
-    email "abc@gmail.com"
-  end
-=======
 	factory :user, class: User do
 		email 'a@b.com'
 		password 'password'
@@ -16,6 +6,6 @@ FactoryGirl.define do
 		firstname 'firstname'
 		lastname 'lastname'
 		boy true		
+		date_of_birth '12/12/12'
 	end
->>>>>>> Stashed changes
 end
