@@ -4,21 +4,24 @@ class User
   key :firstname, String
   key :lastname, String
   key :boy, Boolean
-  key :date_of_birth, Date
-  key :email, String	
+  key :date_of_birth, String
+  key :email, String
 	key :crypted_password, String  
   
   def self.authenticate(email, secret)
-    u = User.first(:conditions => {:username => email})
+		if email.rindex("@")
+			u = User.find_by_email(email)
+    else u = User.find_by_username(email)
+    end
     u && u.authenticated?(secret) ? u : nil
   end
 	
   PasswordRequired = Proc.new { |u| u.password_required? }
   validates_presence_of :password, :if => PasswordRequired
-  validates_presence_of :username, :firstname,:lastname,:boy,:email,:date_of_birth
+  validates_presence_of :username, :boy,:email,:date_of_birth
   
   def authenticated?(secret)
-    password == secret ? true : false
+    password == secret
   end
   
   def password

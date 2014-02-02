@@ -1,6 +1,4 @@
 class QuestionController  < ApplicationController
-
-
   def post
       question=Question.new(params[:question])
       question.user=User.new
@@ -8,5 +6,4 @@ class QuestionController  < ApplicationController
       question.save
       redirect_to activity_path
     end
-  
 end
