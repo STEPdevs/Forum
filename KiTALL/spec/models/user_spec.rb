@@ -10,7 +10,7 @@ describe User do
 	  expect(authenticated_user.email).to eq(user.email)
 	end
 
-	{username: "",firstname: "",lastname: "",email: "",password: ""}.each do |field,value|
+	{date_of_birth: "", username: "",email: "",password: ""}.each do |field,value|
 		it "should not create user if #{field} is blank" do
 			build(:user, {field=> value}).should_not be_valid
 		end
