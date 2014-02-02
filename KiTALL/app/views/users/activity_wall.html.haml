@@ -1,9 +1,9 @@
 %html
   %head
   %body
+  .activity-wall
     #box
       =form_for @question, url: "user/post" do |f|
         =f.text_area :title, :require=>true
         =f.submit :Post, class:"submit-button", :id=>"post-btn"
-
   = javascript_include_tag "question-box"

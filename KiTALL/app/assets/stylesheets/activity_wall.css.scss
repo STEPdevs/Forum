@@ -1,0 +1,19 @@
+.activity-wall{
+	border-top: 1px solid white;
+	position: relative;
+	left: -9px;	
+	top: 42px;
+	background-color: white;
+	width: 102%;
+	height: 800px;
+}
+.box{
+	width: 400px;
+	height: 200px;
+	position: absolute;
+	left: 100px;
+	background: -webkit-radial-gradient(50% 50%, circle, white,indigo 140%);
+	top: 300px;
+	border: 1px solid indigo;
+	border-radius: 10px;
+}

@@ -3,4 +3,5 @@
 *= require jquery-ui	
 *= require_tree .
 *= require question-box
+*= require activity_wall
 */
