@@ -1,6 +1,9 @@
-body{
+.outer{
 	background: -webkit-radial-gradient( -8% 94%, circle, white, blueviolet 82%);
 	position: relative;
+	margin-left: -9px;
+	margin-right: -9px;
+	height: 750px;
 }
 .arrow:hover{
 	border-top-color: indigo;

@@ -1,5 +1,6 @@
 %html
 	%body
+	.outer
 		.main-container
 			.left-container
 				%h1.drop.relief KiTALL
@@ -8,6 +9,6 @@
 			%span.animate ...
 			.container
 				.login
-					= unless current_user
+					- unless current_user
 						= render :partial=>'session/new'
 						= render :partial=>'registration/new'

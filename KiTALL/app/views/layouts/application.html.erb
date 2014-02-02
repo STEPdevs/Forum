@@ -9,12 +9,15 @@
 <body>
 	<div class="header">
 		<%-if current_user %>
-				<span class="logo header-items">KiTALL</span>
+				<span class="logo">KiTALL</span>
 				<%=form_tag session_path,method:"DELETE" do %>
 					<%=submit_tag "logout",class:"header-items left left-space logout-link"%>
 				<%end%>
 				<span class="header-items left">Guide</span>
-				<a href="/users/1"><span class="header-items left"><img src="1.jpg" class="header-items profile-pic left"></img><%=current_user.username%></span></a>
+				<a href="/users/1" class="header-items left">
+					<%=current_user.username%>
+					<img src="1.jpg" class="profile-pic"></img>
+				</a>
 		<%end%>
 
 	</div>

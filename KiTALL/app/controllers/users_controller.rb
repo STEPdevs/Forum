@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 				session[:user_id] = @user.id
         format.html { redirect_to activity_path, :notice=> 'User was successfully created.'}
       else
-        format.html { render action: 'index' }
+        format.html { render :file=>'home/index' }
       end
     end
   end
