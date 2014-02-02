@@ -8,5 +8,6 @@
 			%span.animate ...
 			.container
 				.login
-					= render :partial=>'session/new'
-					= render :partial=>'registration/new'
+					= unless current_user
+						= render :partial=>'session/new'
+						= render :partial=>'registration/new'

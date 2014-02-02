@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+	before_filter :authenticate_user, only:[:activity_wall]
   def create
     @user = User.new(params[:user])
     respond_to do |format|
